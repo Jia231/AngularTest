@@ -1,0 +1,252 @@
+<script>
+window.onload=DisableOff;
+DisableOff();
+
+function DisableOff()
+{
+    addEventHandlers("click",NOReadOnly);
+  addEventHandlers("load",NOReadOnly);
+  NOReadOnly();
+
+        addEventHandlers("click",ReadOnly);
+        addEventHandlers("load",ReadOnly);
+ReadOnly();
+
+}
+
+function addEventHandlers(eventType, eventFunction){
+  var element = document.body;
+  if(navigator.appName=="Microsoft Internet Explorer"){
+    element.attachEvent('on'+eventType, eventFunction);
+  }
+  else
+    element.addEventListener(eventType, eventFunction, false);  
+}
+
+
+
+  document.getElementById("g51_13_other").disabled=true;
+  document.getElementById("g51_14_other").disabled=true;
+  document.getElementById("g51_15_other").disabled=true;
+  document.getElementById("g51_16_other").disabled=true;
+
+  document.getElementById("g59_13_other").disabled=true;
+  document.getElementById("g59_14_other").disabled=true;
+  document.getElementById("g59_15_other").disabled=true;
+  document.getElementById("g59_16_other").disabled=true;
+
+
+
+function NOReadOnly()
+{
+	try{
+ for(var i=1;i<17;i++)
+  {
+  document.getElementById("q53_"+i).disabled=true;
+  document.getElementById("q54_"+i).disabled=true;
+  document.getElementById("q55_"+i).disabled=true;
+  document.getElementById("q56_"+i).disabled=true;
+  document.getElementById("q57_"+i).disabled=true;
+
+  }
+
+  document.getElementById("g51_13_other").disabled=true;
+  document.getElementById("g51_14_other").disabled=true;
+  document.getElementById("g51_15_other").disabled=true;
+  document.getElementById("g51_16_other").disabled=true;
+
+ for(var i=1;i<17;i++)
+  {
+  if(document.getElementById("q52_"+i).checked==true)
+  {
+  document.getElementById("q53_"+i).disabled=false;
+  document.getElementById("q54_"+i).disabled=false;
+  document.getElementById("q55_"+i).disabled=false;
+  document.getElementById("q56_"+i).disabled=false;
+  document.getElementById("q57_"+i).disabled=false;
+  }
+  else
+  {
+  document.getElementById("q53_"+i).disabled=true;
+  document.getElementById("q54_"+i).disabled=true;
+  document.getElementById("q55_"+i).disabled=true;
+  document.getElementById("q56_"+i).disabled=true;
+  document.getElementById("q57_"+i).disabled=true;
+  document.getElementById("q53_"+i).value='';
+  document.getElementById("q54_"+i).value='';
+  document.getElementById("q55_"+i).value='';
+  document.getElementById("q56_"+i).value='';
+  document.getElementById("q57_"+i).value='';
+  }
+  }
+
+    if(document.getElementById("g51_12_other").value!='' && document.getElementById("q52_12").checked==true)
+    {
+
+      document.getElementById("g51_13_other").disabled=false;
+      document.getElementById("q52_13").disabled=false;
+    }
+    else
+    {
+      document.getElementById("g51_13_other").disabled=true;
+      document.getElementById("g51_13_other").value='';
+      document.getElementById("q52_13").disabled=true;
+    }
+
+      if(document.getElementById("g51_13_other").value!='' && document.getElementById("q52_13").checked==true)
+    {
+
+      document.getElementById("g51_14_other").disabled=false;
+      document.getElementById("q52_14").disabled=false;
+    }
+    else
+    {
+      document.getElementById("g51_14_other").disabled=true;
+      document.getElementById("g51_14_other").value='';
+      document.getElementById("q52_14").disabled=true;
+    }
+
+      if(document.getElementById("g51_14_other").value!='' && document.getElementById("q52_14").checked==true)
+    {
+
+      document.getElementById("g51_15_other").disabled=false;
+      document.getElementById("q52_15").disabled=false;
+    }
+    else
+    {
+      document.getElementById("g51_15_other").disabled=true;
+      document.getElementById("g51_15_other").value='';
+      document.getElementById("q52_15").disabled=true;
+    }
+        if(document.getElementById("g51_15_other").value!='' && document.getElementById("q52_15").checked==true)
+    {
+
+      document.getElementById("g51_16_other").disabled=false;
+      document.getElementById("q52_16").disabled=false;
+    }
+    else
+    {
+      document.getElementById("g51_16_other").disabled=true;
+      document.getElementById("g51_16_other").value='';
+      document.getElementById("q52_16").disabled=true;
+    }
+
+}
+
+catch(e){
+
+	console.log(e);
+}
+
+
+
+} 
+
+
+function ReadOnly()
+{
+	try{
+ for(var p=1;p<17;p++)
+  {
+  document.getElementById("q62_"+p).disabled=true;
+  document.getElementById("q63_"+p).disabled=true;
+  document.getElementById("q64_"+p).disabled=true;
+  document.getElementById("q65_"+p).disabled=true;
+  document.getElementById("q66_"+p).disabled=true;
+
+  }
+
+  document.getElementById("g59_13_other").disabled=true;
+  document.getElementById("g59_14_other").disabled=true;
+  document.getElementById("g59_15_other").disabled=true;
+  document.getElementById("g59_16_other").disabled=true;
+
+ for(var p=1;p<17;p++)
+  {
+  if(document.getElementById("q61_"+p).checked==true)
+  {
+  document.getElementById("q62_"+p).disabled=false;
+  document.getElementById("q63_"+p).disabled=false;
+  document.getElementById("q64_"+p).disabled=false;
+  document.getElementById("q65_"+p).disabled=false;
+  document.getElementById("q66_"+p).disabled=false;
+  }
+  else
+  {
+  document.getElementById("q62_"+p).disabled=true;
+  document.getElementById("q63_"+p).disabled=true;
+  document.getElementById("q64_"+p).disabled=true;
+  document.getElementById("q65_"+p).disabled=true;
+  document.getElementById("q66_"+p).disabled=true;
+  document.getElementById("q62_"+p).value='';
+  document.getElementById("q63_"+p).value='';
+  document.getElementById("q64_"+p).value='';
+  document.getElementById("q65_"+p).value='';
+  document.getElementById("q66_"+p).value='';
+  }
+  }
+
+    if(document.getElementById("g59_12_other").value!='' && document.getElementById("q61_12").checked==true)
+    {
+
+      document.getElementById("g59_13_other").disabled=false;
+      document.getElementById("q61_13").disabled=false;
+    }
+    else
+    {
+      document.getElementById("g59_13_other").disabled=true;
+      document.getElementById("g59_13_other").value='';
+      document.getElementById("q61_13").disabled=true;
+    }
+
+      if(document.getElementById("g59_13_other").value!='' && document.getElementById("q61_13").checked==true)
+    {
+
+      document.getElementById("g59_14_other").disabled=false;
+      document.getElementById("q61_14").disabled=false;
+    }
+    else
+    {
+      document.getElementById("g59_14_other").disabled=true;
+      document.getElementById("g59_14_other").value='';
+      document.getElementById("q61_14").disabled=true;
+    }
+
+      if(document.getElementById("g59_14_other").value!='' && document.getElementById("q61_14").checked==true)
+    {
+
+      document.getElementById("g59_15_other").disabled=false;
+      document.getElementById("q61_15").disabled=false;
+    }
+    else
+    {
+      document.getElementById("g59_15_other").disabled=true;
+      document.getElementById("g59_15_other").value='';
+      document.getElementById("q61_15").disabled=true;
+    }
+        if(document.getElementById("g59_15_other").value!='' && document.getElementById("q61_15").checked==true)
+    {
+
+      document.getElementById("g59_16_other").disabled=false;
+      document.getElementById("q61_16").disabled=false;
+    }
+    else
+    {
+      document.getElementById("g59_16_other").disabled=true;
+      document.getElementById("g59_16_other").value='';
+      document.getElementById("q61_16").disabled=true;
+    }
+
+}
+
+catch(e){
+
+console.log(e);
+
+}
+
+
+}  
+
+
+</script> 
